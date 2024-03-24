@@ -36,10 +36,13 @@ body {
   /* Set background image to no repeat */
   background-repeat: no-repeat;
   /* use custom ./public/tomahawk-mf-regular.ttf font */
-  font-family: 'Tomahawk MF';
+  font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   /* Set text shadow */
   text-shadow: 2px 2px 4px #000000;
 }
+
 
 .App-link {
   color: #7FC4A2
