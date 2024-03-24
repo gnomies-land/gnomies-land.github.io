@@ -14,18 +14,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #072C2E;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(50px + 2vmin);
+  color: #258e88;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #7FC4A2;
 }
 
 @keyframes App-logo-spin {
