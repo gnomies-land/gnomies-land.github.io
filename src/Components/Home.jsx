@@ -1,4 +1,4 @@
-function Home() {
+export default function Home() {
   return (
     <header className="App-header">
       <h2>Welcome to Gnomies Land!</h2>
@@ -16,4 +16,3 @@ function Home() {
   );
 }
 
-export default Home;

@@ -60,3 +60,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* app-nav style */
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 2rem;
+  background-color: #072C2E;
+  color: #258e88;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+  /* Make app-nav allways on top */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+
+}
+
+.container {
+ 
+}
+
+/* site-title style */
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7FC4A2;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+/* .app-nav ul style */
+.app-nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+/* .app-nav a style */
+.app-nav a {
+  color: #7FC4A2;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .25rem;
+}
+
+.app-nav li:hover {
+  background-color: #7FC4A2;
+  color: #072C2E;
+  border-radius: 5px;
+}
+
+.app-nav li.active {
+  background-color: #7FC4A2;
+  color: #072C2E;
+  border-radius: 5px;
+}
