@@ -41,6 +41,7 @@ body {
     sans-serif;
   /* Set text shadow */
   text-shadow: 2px 2px 4px #000000;
+  opacity: 0.9;
 }
 
 /* Style for mobile devices */
@@ -89,6 +90,9 @@ code {
 
 /* site-title style */
 .site-title {
+  font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   font-size: 2rem;
   font-weight: bold;
   color: #7FC4A2;
@@ -162,12 +166,17 @@ code {
   background-attachment: fixed;
   /* Set background image to no repeat */
   background-repeat: no-repeat;
+  /* put some opacity to the background */
+  opacity: 0.9;
   /* use custom ./public/tomahawk-mf-regular.ttf font */
+  /* Improve text readability */
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  /* Set text shadow */
+  /* improve even more text readability */
   text-shadow: 2px 2px 4px #000000;
+  /* Even moooore text readability */
+  font-size: 2rem;
 }
 
 .about-heading {
@@ -180,6 +189,7 @@ code {
   font-size: 3rem;
   font-weight: normal;
   text-shadow: 2px 2px 4px #000000;
+  
 }
 
 /* Style for mobile devices */
@@ -188,10 +198,10 @@ code {
     padding: 1rem;
   }
   .about-heading {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   .about-description {
-    font-size: 1rem;
+    font-size: 1.75rem;
     padding: 0rem;
   }
 }
