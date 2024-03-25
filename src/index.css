@@ -127,6 +127,19 @@ code {
   border-radius: 5px;
 }
 
+/* Navbar style for mobile devices */
+@media only screen and (max-width: 600px) {
+  .site-title {
+    font-size: 0rem;
+  }
+  .app-nav {
+    gap: 1rem;
+  }
+  .app-nav ul {
+    gap: 1rem;
+  }
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -170,3 +183,18 @@ code {
   color: #7FC4A2;
   text-shadow: 2px 2px 4px #000000;
 }
+
+/* Style for mobile devices */
+@media only screen and (max-width: 600px) {
+  .about-container {
+    padding: 1rem;
+  }
+  .about-heading {
+    font-size: 2rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    padding: 0rem;
+  }
+}
+
