@@ -12,27 +12,27 @@ body {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 4rem;
   pointer-events: none;
 }
 
+.App-image {
+  max-width: 80%;
+}
+
 .App-header {
-  background-color: #072C2E;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(30px + 2vmin);
-  color: #258e88;
-  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39, 170, 164, 1) 100%);
-  /* use custom ./public/tomahawk-mf-regular.ttf font */
-  font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  /* Set text shadow */
-  text-shadow: 2px 2px 4px #000000;
-  opacity: 0.9;
+  color: white;
+  background-color: #9ce2f9;
+  font-family: 'Pingsan', sans-serif;
+}
+
+.App-link {
+  color: #2eb4e0;
 }
 
 /* Style for mobile devices */
@@ -40,11 +40,6 @@ body {
   .App-header {
     font-size: calc(20px + 2vmin);
   }
-}
-
-
-.App-link {
-  color: #7FC4A2;
 }
 
 code {
@@ -60,29 +55,23 @@ code {
   align-items: center;
   padding: 0 1rem;
   gap: 2rem;
-  background-color: #072C2E;
-  color: #258e88;
+  background-color: #4190aa;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px #000000;
-  /* Make app-nav allways on top */
   position: sticky;
   top: 0;
   z-index: 1000;
-
-
+  padding: 0.5rem;
 }
 
 /* site-title style */
 .site-title {
-  font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Tomahawk MF Regular', sans-serif;
   font-size: 3rem;
   font-weight: bold;
-  color: #7FC4A2;
-  text-shadow: 2px 2px 4px #000000;
+  color: white;
 }
 
 /* .app-nav ul style */
@@ -97,24 +86,24 @@ code {
 
 /* .app-nav a style */
 .app-nav a {
+  font-family: 'Pingsan', sans-serif;
   color: #7FC4A2;
   text-decoration: none;
   color: inherit;
   height: 100%;
-  display: flex;
   align-items: center;
   padding: .25rem;
 }
 
 .app-nav li:hover {
-  background-color: #7FC4A2;
-  color: #072C2E;
+  background-color: #c8e1fb;
+  color: #4190aa;
   border-radius: 5px;
 }
 
 .app-nav li.active {
-  background-color: #7FC4A2;
-  color: #072C2E;
+  background-color: #c8e1fb;
+  color: #4190aa;
   border-radius: 5px;
 }
 
@@ -140,19 +129,12 @@ code {
   justify-content: center;
   gap: 1rem;
   padding: 10rem;
-  background-color: #072C2E;
-  color: #258e88;
+  color: white;
   font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
-  text-align: justify;
+  text-align: center;
   margin: 0;
-  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39, 170, 164, 1) 100%);
-  /* Improve text readability */
-  font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  /* improve even more text readability */
-  text-shadow: 2px 2px 4px #000000;
+  background-color: #9ce2f9;  /* Improve text readability */
+  font-family: 'Pingsan', sans-serif;
   /* Even moooore text readability */
   font-size: 2rem;
 }
@@ -160,14 +142,11 @@ code {
 .about-heading {
   font-size: 5rem;
   font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .about-description {
   font-size: 3rem;
   font-weight: normal;
-  text-shadow: 2px 2px 4px #000000;
-
 }
 
 /* Style for mobile devices */
@@ -188,10 +167,9 @@ code {
 
 
 .footer {
-  background-color: #072C2E;
-  color: #258e88;
+  background-color: #4190aa;
+  color: white;
   font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
   text-align: center;
   padding: 1rem;
   font-size: 1rem;
@@ -202,7 +180,6 @@ code {
 .footer-info {
   font-size: 2rem;
   font-weight: normal;
-  text-shadow: 2px 2px 4px #000000;
   align-items: center;
 }
 
