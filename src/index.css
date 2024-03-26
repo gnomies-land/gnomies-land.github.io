@@ -25,16 +25,7 @@ body {
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: #258e88;
-  /* Set backgroun image public/sunset-bg.jpg */
-  background-image: url('../public/sunset-bg.jpg');
-  /* Fit background image */
-  background-size: cover;
-  /* Center background image */
-  background-position: center;
-  /* Set background image to fixed */
-  background-attachment: fixed;
-  /* Set background image to no repeat */
-  background-repeat: no-repeat;
+  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39,170,164,1) 100%);
   /* use custom ./public/tomahawk-mf-regular.ttf font */
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -157,18 +148,7 @@ code {
   text-shadow: 2px 2px 4px #000000;
   text-align: justify;
   margin: 0;
-  background-image: url('../public/sunset-bg.jpg');
-  /* Fit background image */
-  background-size: cover;
-  /* Center background image */
-  background-position: center;
-  /* Set background image to fixed */
-  background-attachment: fixed;
-  /* Set background image to no repeat */
-  background-repeat: no-repeat;
-  /* put some opacity to the background */
-  opacity: 0.9;
-  /* use custom ./public/tomahawk-mf-regular.ttf font */
+  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39,170,164,1) 100%);
   /* Improve text readability */
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
