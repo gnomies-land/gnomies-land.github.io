@@ -25,7 +25,7 @@ body {
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: #258e88;
-  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39,170,164,1) 100%);
+  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39, 170, 164, 1) 100%);
   /* use custom ./public/tomahawk-mf-regular.ttf font */
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -44,8 +44,7 @@ body {
 
 
 .App-link {
-  color: #7FC4A2
-  ;
+  color: #7FC4A2;
 }
 
 code {
@@ -78,8 +77,8 @@ code {
 /* site-title style */
 .site-title {
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   font-size: 3rem;
   font-weight: bold;
   color: #7FC4A2;
@@ -124,9 +123,11 @@ code {
   .site-title {
     font-size: 0rem;
   }
+
   .app-nav {
     gap: 1rem;
   }
+
   .app-nav ul {
     gap: 1rem;
   }
@@ -145,7 +146,7 @@ code {
   text-shadow: 2px 2px 4px #000000;
   text-align: justify;
   margin: 0;
-  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39,170,164,1) 100%);
+  background: radial-gradient(circle, rgb(229, 230, 117) 0%, rgba(39, 170, 164, 1) 100%);
   /* Improve text readability */
   font-family: 'Tomahawk MF Regular', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -166,7 +167,7 @@ code {
   font-size: 3rem;
   font-weight: normal;
   text-shadow: 2px 2px 4px #000000;
-  
+
 }
 
 /* Style for mobile devices */
@@ -174,9 +175,11 @@ code {
   .about-container {
     padding: 1rem;
   }
+
   .about-heading {
     font-size: 2.25rem;
   }
+
   .about-description {
     font-size: 1.75rem;
     padding: 0rem;
@@ -192,7 +195,7 @@ code {
   text-align: center;
   padding: 1rem;
   font-size: 1rem;
-  
+
 }
 
 
