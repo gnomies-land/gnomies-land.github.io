@@ -20,6 +20,13 @@ body {
   max-width: 60%;
 }
 
+/* App image style for mobile devices */
+@media only screen and (max-width: 600px) {
+  .App-image {
+    max-width: 90%;
+  }
+}
+
 .App-header {
   display: flex;
   flex-direction: column;
