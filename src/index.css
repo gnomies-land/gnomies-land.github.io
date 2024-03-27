@@ -17,7 +17,7 @@ body {
 }
 
 .App-image {
-  max-width: 80%;
+  max-width: 60%;
 }
 
 .App-header {
@@ -72,6 +72,7 @@ code {
   font-size: 3rem;
   font-weight: bold;
   color: white;
+  display: flex;
 }
 
 /* .app-nav ul style */
