@@ -108,12 +108,13 @@ code {
   color: #4190aa;
   border-radius: 5px;
 }
-
+/*
 .app-nav li.active {
   background-color: #c8e1fb;
   color: #4190aa;
   border-radius: 5px;
 }
+*/
 
 /* Navbar style for mobile devices */
 @media only screen and (max-width: 600px) {

@@ -11,13 +11,27 @@ export default function Navbar() {
       
       </Link>
       <ul>
-        <CustomLink to="/">Home</CustomLink>
-        <CustomLink to="/about">About</CustomLink>
+        <CustomA to="#home">Home</CustomA>
+        <CustomA to="#about">About</CustomA>
       </ul>
     </nav>
   );
 }
 
+function CustomA({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+
+  return (
+    <li className={isActive ? "active" : ""}>
+      <a href={to} {...props}>
+        {children}
+      </a>
+    </li>
+  );
+}
+
+// eslint-disable-next-line no-unused-vars
 function CustomLink({ to, children, ...props }) {
   const resolvedPath = useResolvedPath(to);
   const isActive = useMatch({ path: resolvedPath.pathname, end: true });

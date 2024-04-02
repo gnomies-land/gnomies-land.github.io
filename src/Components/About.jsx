@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="about-container">
+    <div className="about-container" id="about">
       <h1 className="about-heading">About Gnomies Land</h1>
       <p className="about-description">
         Welcome to the enchanting universe of the Gnomies Land, where magic

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-      <header className="App-header">
+      <header className="App-header" id="home">
         <img src={logo} className="App-image" alt="logo" />
         <h2>Welcome to Gnomies Land!</h2>
         <p>Embark on an epic journey with the Gnomies!</p>
