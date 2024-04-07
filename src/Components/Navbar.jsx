@@ -4,7 +4,7 @@ import logo from "../assets/logo.png";
 export default function Navbar() {
   return (
     <nav className="app-nav">
-      <Link to="/" className="site-title">
+      <Link to="#home" className="site-title">
       
       <img src={logo} className="App-logo" alt="logo" />
         Gnomies Land
