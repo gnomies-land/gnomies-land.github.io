@@ -4,12 +4,12 @@ import logo from "../assets/logo.png";
 export default function Navbar() {
   return (
     <nav className="app-nav">
-      <Link to="#home" className="site-title">
+      <a href="/#home" className="site-title">
       
       <img src={logo} className="App-logo" alt="logo" />
         Gnomies Land
       
-      </Link>
+      </a>
       <ul>
         <CustomA to="#home">Home</CustomA>
         <CustomA to="#about">About</CustomA>
