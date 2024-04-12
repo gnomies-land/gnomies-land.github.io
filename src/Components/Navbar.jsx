@@ -1,5 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import logo from "../assets/logo.png";
+import WalletButton from "./WalletButton";
 
 export default function Navbar() {
   return (
@@ -13,6 +14,7 @@ export default function Navbar() {
       <ul>
         <CustomA to="#home">Home</CustomA>
         <CustomA to="#about">About</CustomA>
+        <CustomA><WalletButton/></CustomA>
       </ul>
     </nav>
   );
