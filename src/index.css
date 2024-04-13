@@ -35,7 +35,7 @@ body {
   font-size: calc(30px + 2vmin);
   color: white;
   background-color: #9ce2f9;
-  font-family: 'Pingsan', sans-serif;
+ font-family: 'Pingsan', sans-serif;
   padding-top: 5rem;
 }
 
@@ -118,7 +118,7 @@ code {
 */
 
 /* Navbar style for mobile devices */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .site-title {
     font-size: 0rem;
   }
@@ -212,4 +212,101 @@ code {
   display: flex;
   align-items: center;
   padding: .25rem;
+}
+
+.phantom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+  color: white;
+  background-color: #a087e9;
+  font-family: 'Pingsan', sans-serif;
+  padding-top: 5rem;
+  min-height: 100%;
+  padding-bottom: 5rem;
+}
+
+.phantom-heading {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.phantom-button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #59488e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Pingsan', sans-serif;
+  margin-left: 2.5rem;
+}
+
+.phantom-input {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 1px solid #59488e;
+  border-radius: 5px;
+  font-family: 'Pingsan', sans-serif;
+  margin-left: 2.5rem;
+}
+
+.phantom-button:disabled {
+  background-color: #1b0f40;
+}
+
+
+.App-icon {
+  height: 3rem;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Nav-text {
+    display: none;
+  }
+}
+
+/*Style for class "App-nav Phantom-nav"  */
+.app-nav.phantom {
+  background-color: #59488e;
+  color: white;
+}
+
+.footer.phantom {
+  background-color: #59488e;
+  color: white;
+}
+
+.active.phantom {
+  background-color: #a087e9;
+  color: white;
+  border-radius: 5px;
+}
+
+.app-nav.phantom li:hover {
+  background-color: #a087e9;
+  color: #59488e;
+  border-radius: 5px;
+}
+
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 10rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  background-color: #9ce2f9;  /* Improve text readability */
+  font-family: 'Pingsan', sans-serif;
+  /* Even moooore text readability */
+  font-size: 2rem;
 }

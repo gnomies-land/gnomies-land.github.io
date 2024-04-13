@@ -1,3 +1,4 @@
+
 export default function About() {
   return (
     <div className="about-container" id="about">
@@ -29,7 +30,7 @@ export default function About() {
       <p className="about-description">
         So, whether you're here to seek inspiration, connect with fellow
         Gnomies, or simply lose yourself in the enchanting allure of our realm,
-        know that you're not just a visitor – you're an integral part of what
+        know that you're not just a visitor - you're an integral part of what
         makes Gnomies Land the most magical place on the internet!
       </p>
     </div>
