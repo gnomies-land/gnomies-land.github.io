@@ -12,10 +12,10 @@ export default function Navbar() {
           : "app-nav"
       }
     >
-      <a href="/#home" className="site-title">
+      <Link to="/" className="site-title">
         <img src={logo} className="App-logo" alt="logo" />
         Gnomies Land
-      </a>
+      </Link>
       <ul>
         <CustomA to="/#home" className="Nav-text">
           Home

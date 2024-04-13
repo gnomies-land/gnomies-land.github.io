@@ -6,6 +6,8 @@ import Phantom from "./components/Phantom";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Roadmap from "./components/Roadmap";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function FullHome() {
   return (
@@ -17,8 +19,22 @@ function FullHome() {
   );
 }
 export default function App() {
+  const location = useLocation();
+  const [backgroundColor, setBackgroundColor] = useState('#9ce2f9');  // Color por defecto
+
+  useEffect(() => {
+    // Cambiar el color de fondo basado en la ruta
+    switch(location.pathname) {
+      case '/phantom':
+        setBackgroundColor('#a087e9');
+        break;
+      default:
+        setBackgroundColor('#9ce2f9');
+    }
+  }, [location]);
+
   return (
-    <main className="App">
+    <main className="App" style={{ transition: 'background-color 2.5s ease', backgroundColor: backgroundColor }}>
       <Navbar />
       <div className="container">
         <Routes>
