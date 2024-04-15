@@ -1,5 +1,5 @@
-import roadmapTitle from "../assets/roadmap-title.png";
-import roadmap from "../assets/roadmap.png";
+import roadmapTitle from "../../assets/roadmap-title.png";
+import roadmap from "../../assets/roadmap.png";
 
 export default function Roadmap() {
     return (
