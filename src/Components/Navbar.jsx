@@ -1,7 +1,6 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import logo from "../assets/logo.png";
-import { RiGhostFill } from "react-icons/ri";
-
+import phantomLogo from "../assets/phantom-logo.png";
+import logo from "../assets/logo.png";;
 
 export default function Navbar() {
   return (
@@ -12,10 +11,12 @@ export default function Navbar() {
           : "app-nav"
       }
     >
-      <Link to="/" className="site-title">
+      <ul>
+      <CustomLink to="/" className="site-title">
         <img src={logo} className="App-logo" alt="logo" />
-        Gnomies Land
-      </Link>
+        <span className="App-name-nav">Gnomies Land</span>
+      </CustomLink>
+      </ul>
       <ul>
         <CustomA to="/#home" className="Nav-text">
           Home
@@ -27,7 +28,7 @@ export default function Navbar() {
           Roadmap
         </CustomA>
         <CustomLink to="/phantom">
-          <RiGhostFill className="App-icon" />
+          <img src={phantomLogo} className="Phantom-icon" alt="phantom-logo"/>
         </CustomLink>
       </ul>
     </nav>

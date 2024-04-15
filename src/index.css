@@ -12,8 +12,9 @@ body {
 }
 
 .App-logo {
-  height: 4rem;
+  height: 2.15rem;
   pointer-events: none;
+  margin-right: 0.5rem;
 }
 
 .App-image {
@@ -24,6 +25,9 @@ body {
 @media only screen and (max-width: 600px) {
   .App-image {
     max-width: 90%;
+  }
+  .App-logo {
+    height: 2rem;
   }
 }
 
@@ -77,7 +81,7 @@ code {
 /* site-title style */
 .site-title {
   font-family: 'Tomahawk MF Regular', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   display: flex;
@@ -119,8 +123,15 @@ code {
 
 /* Navbar style for mobile devices */
 @media only screen and (max-width: 800px) {
-  .site-title {
-    font-size: 0rem;
+  .App-logo {
+    max-width: 2rem;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .App-name-nav {
+    display: none;
   }
 
   .app-nav {
@@ -261,6 +272,11 @@ code {
 
 .App-icon {
   height: 3rem;
+  pointer-events: none;
+}
+
+.Phantom-icon {
+  height: 2rem;
   pointer-events: none;
 }
 

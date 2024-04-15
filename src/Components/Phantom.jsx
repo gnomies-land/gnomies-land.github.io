@@ -114,6 +114,106 @@ export default function Phantom() {
     return querySnapshot.size;
   };
 
+  const ParticipateForm = () => {
+    return (
+      <div className="participate-form">
+        <p className="phantom-description">
+          We will be holding a Airdrop for the first official gnomies nft.
+        </p>
+        <p>To participate you must follow these steps:</p>
+        <p>
+          Follow us on twitter
+          <button
+            className="phantom-button follow-button"
+            onClick={(el) => {
+              window.open("https://twitter.com/gnomies_land", "_blank");
+              el.target.innerHTML = "Followed";
+              el.target.disabled = true;
+              // Save on local storage that the user has followed
+              localStorage.setItem("twitter-followed", "true");
+              toggleParticipate();
+            }}
+            disabled={localStorage.getItem("twitter-followed") ? true : false}
+          >
+            {localStorage.getItem("twitter-followed") ? "Followed" : "Follow"}
+          </button>
+        </p>
+        <p>
+          Join our telegram channel
+          <button
+            className="phantom-button join-button"
+            onClick={(el) => {
+              window.open("https://t.me/GnomiesLand", "_blank");
+              el.target.innerHTML = "Joined";
+              el.target.disabled = true;
+              // Save on local storage that the user has joined
+              localStorage.setItem("telegram-joined", "true");
+              toggleParticipate();
+            }}
+            disabled={localStorage.getItem("telegram-joined") ? true : false}
+          >
+            {localStorage.getItem("telegram-joined") ? "Joined" : "Join"}
+          </button>
+        </p>
+        <p>
+          Twitter account
+          <input
+            type="text"
+            value={twitterUsername}
+            onChange={handleTwitterChange}
+            placeholder="Your Twitter Username"
+            className="phantom-input twitter-input"
+          />
+          <button
+            className="phantom-button check-button"
+            onClick={async (el) => {
+              const twitterRegex = /^@?(\w){1,15}$/;
+              if (!twitterRegex.test(twitterUsername)) {
+                alert("Invalid twitter username.");
+                return;
+              }
+              // Check if the user has connected their wallet
+              const q = query(
+                collection(db, "wallets"),
+                where("twitter", "==", twitterUsername)
+              );
+              const querySnapshot = await getDocs(q);
+              console.log(querySnapshot);
+              if (!querySnapshot.empty) {
+                alert("This twitter account has already been used.");
+              } else {
+                el.target.innerHTML = "Checked";
+                el.target.disabled = true;
+                document.querySelector(".twitter-input").disabled = true;
+                toggleParticipate();
+              }
+            }}
+          >
+            Check
+          </button>
+        </p>
+        <p>
+          Connect your wallet
+          <ConnectButton />
+        </p>
+        <p>
+          <button className="phantom-button participate-button" disabled={true}>
+            Participate in the Airdrop
+          </button>
+        </p>
+      </div>
+    );
+  };
+
+  const AlreadyParticipating = () => {
+    return (
+      <div>
+        <p>You have already participated in the airdrop.</p>
+        <p>Stay tuned to our Telegram channel to see the winners.</p>
+      </div>
+    );
+  }
+
   // wait until getConnectedWalletsCount is resolved
   let walletsCount = 0;
 
@@ -125,89 +225,13 @@ export default function Phantom() {
       ).innerHTML = `wallets connected: ${count} / ${airDropLimit}`;
     walletsCount = count;
   });
+
   return (
     <div className="phantom-container" id="phantom">
       <img src={airdropTitle} className="App-image" alt="logo" />
       <h1 className="phantom-heading">Connect to Phantom Wallet</h1>
       <p className="phantom-description">wallets connected</p>
-      <p className="phantom-description">
-        We will be holding a Airdrop for the first official gnomies nft.
-      </p>
-      <p>To participate you must follow these steps:</p>
-      <p>
-        Connect your wallet
-        <ConnectButton />
-      </p>
-      <p>
-        Twitter account
-        <input
-          type="text"
-          value={twitterUsername}
-          onChange={handleTwitterChange}
-          placeholder="Your Twitter Username"
-          className="phantom-input twitter-input"
-        />
-        <button
-          className="phantom-button check-button"
-          onClick={async (el) => {
-            const twitterRegex = /^@?(\w){1,15}$/;
-            if (!twitterRegex.test(twitterUsername)) {
-              alert("Invalid twitter username.");
-              return;
-            }
-            // Check if the user has connected their wallet
-            const q = query(
-              collection(db, "wallets"),
-              where("twitter", "==", twitterUsername)
-            );
-            const querySnapshot = await getDocs(q);
-            console.log(querySnapshot);
-            if (!querySnapshot.empty) {
-              alert("This twitter account has already been used.");
-            } else {
-              el.target.innerHTML = "Checked";
-              el.target.disabled = true;
-              document.querySelector(".twitter-input").disabled = true;
-              toggleParticipate();
-            }
-          }}
-        >
-          Check
-        </button>
-      </p>
-      <p>
-        Follow us on twitter
-        <button
-          className="phantom-button follow-button"
-          onClick={(el) => {
-            window.open("https://twitter.com/gnomies_land", "_blank");
-            el.target.innerHTML = "Followed";
-            el.target.disabled = true;
-            toggleParticipate();
-          }}
-        >
-          Follow
-        </button>
-      </p>
-      <p>
-        Join our telegram channel
-        <button
-          className="phantom-button join-button"
-          onClick={(el) => {
-            window.open("https://t.me/GnomiesLand", "_blank");
-            el.target.innerHTML = "Joined";
-            el.target.disabled = true;
-            toggleParticipate();
-          }}
-        >
-          Join
-        </button>
-      </p>
-      <p>
-        <button className="phantom-button participate-button" disabled={true}>
-          Participate in the Airdrop
-        </button>
-      </p>
+      {localStorage.getItem("airdrop") ? <AlreadyParticipating /> : <ParticipateForm />}
       <img src={phantomGnomie} className="App-image" alt="logo" />
     </div>
   );
